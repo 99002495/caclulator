@@ -1,6 +1,7 @@
+#include<math.h>
 #include "unity.h"
 #include "calculator.h"
-#include "math.h"
+
 
 
 /* Required by the unity test framework */
