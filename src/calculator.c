@@ -1,5 +1,5 @@
 #include "calculator.h"
-#include <math.h>
+
 
 
 /* input 2 number with choice of opperator*/
