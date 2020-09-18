@@ -1,13 +1,26 @@
 #include<stdio.h>
-
 /**
-*@file prime_number.h
+* @file factorial.h
 *
 */
+#ifndef __CALCULATOR_H__
+#define __CALCULATOR_H__
+
+
 
 /**
-* This function tells whether the given integer is a prime number or not
-*@param[in] number for which the prime_number function has to decide whether it is prime or not
-*@return Returns true if the given number is prime else false
+* Calculates the factorial of integer number
+* @param[in] 1st Number
+* @param[in] 2st Number
+* @param[in] choice of operator 0:add,1:sub,2:multiply,3:divide
+* @return int out of number1(choice)number2
+* @note Returns 0 for divide with 0
+*@note output is in int form
 */
-int prime_number(int number);
+int calci(int number,int number2,int choice);
+int add(int x, int y);
+int subtract(int x, int y);
+int multiply(int x, int y);
+int divide(int x, int y);
+
+#endif /* #ifndef __FACTORIAL_H__ */
