@@ -2,8 +2,8 @@
 * @file factorial.h
 *
 */
-#ifndef __CACULATOR_H__
-#define __CALCULATOR_H__
+#ifndef __FACTORIAL_H__
+#define __FACTORIAL_H__
 
 /**
 * Calculates the factorial of integer number
@@ -39,10 +39,15 @@ float sine_fun(float num1);
 float cos_fun(float num1);
 float sec_fun(float num1);
 float cosec_fun(float num1);
-
+float exponential(float num1);
 float factorial(float number);
 float one_by(float number);
 float modulous(float number);
+
+int matrix();
+int matrixs_sum();
+int matrix_sub();
+int matrix_mul();
 
 
 #endif /* #ifndef __FACTORIAL_H__ */
