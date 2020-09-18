@@ -1,5 +1,5 @@
 #include "calculator.h"
-#include "math.h"
+#include <math.h>
 
 
 /* input 2 number with choice of opperator*/
@@ -201,7 +201,7 @@ float one_by(float num1)
 float modulous(float num1)
 {
    float intermidiate;
-   intermidiate=abs(num1);
+   intermidiate= abs(num1);
    return(intermidiate);
 
 }
