@@ -233,7 +233,7 @@ int matrix(){
     int matrixs_sum();
     int matrix_sub();
     int matrix_mul();
-    int (*opm[3]);
+    int (*opm[3])();
     opm[0]=matrixs_sum;
     opm[1]=matrix_sub;
     opm[3]=matrix_mul;
