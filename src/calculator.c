@@ -3,9 +3,7 @@
 #include"stdio.h"
 
 
-#include "factorial.h"
-#include"math.h"
-#include "stdio.h"
+
 
 /* input 2 number with choice of opperator*/
 /*this programme uses function Pointer array */
