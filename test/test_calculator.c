@@ -23,7 +23,7 @@ void test_mull(void)
   TEST_ASSERT_EQUAL(0, calci(0,1,2));
 }
 
-int test_main(void)
+int main(void)
 {
 /* Initiate the Unity Test Framework */
   UNITY_BEGIN();
