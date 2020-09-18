@@ -1,30 +1,38 @@
 #include "unity.h"
 #include "calculator.h"
 
-//Required by the test unity framework
-void setUp() {}
 
-//Required by the unity framework
-void tearDown() {}
+/* Required by the unity test framework */
+void setUp(){}
+/* Required by the unity test framework */
+void tearDown(){}
 
-void testing_prime_number(void)
+void test_calci_add(void)
 {
-    TEST_ASSERT_EQUAL(0, prime_number(6));
-    TEST_ASSERT_EQUAL(0, prime_number(4));
-    TEST_ASSERT_EQUAL(1, prime_number(3));
-    TEST_ASSERT_EQUAL(1, prime_number(7));
+  TEST_ASSERT_EQUAL(20, calci(4,5,2));
+  TEST_ASSERT_EQUAL(1, calci(6,-5,0));
 }
-void testing_forlarge_prime_number(void)
+void test_calci_sub(void)
 {
-    TEST_ASSERT_EQUAL(0, prime_number(15));
-    TEST_ASSERT_EQUAL(1, prime_number(17));
-    TEST_ASSERT_EQUAL(1, prime_number(19));
+  TEST_ASSERT_EQUAL(-7, calci(2,9,1));
+  TEST_ASSERT_EQUAL(7, calci(9,2,1));
 }
-int main(void)
+void test_mull(void)
 {
-    //Initiating the unity framework
-    UNITY_BEGIN();
-    RUN_TEST(testing_prime_number);
-    RUN_TEST(testing_forlarge_prime_number);
-    return UNITY_END();
+  TEST_ASSERT_EQUAL(-25, calci(-5,5,2));
+  TEST_ASSERT_EQUAL(0, calci(0,1,2));
+}
+
+int test_main(void)
+{
+/* Initiate the Unity Test Framework */
+  UNITY_BEGIN();
+
+/* Run Test functions */
+  RUN_TEST(test_calci_add);
+  RUN_TEST(test_calci_sub);
+  RUN_TEST(test_mull);
+
+  /* Close the Unity Test Framework */
+  return UNITY_END();
 }
