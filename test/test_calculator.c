@@ -1,4 +1,4 @@
-#include<math.h>
+
 #include "unity.h"
 #include "calculator.h"
 
@@ -24,7 +24,7 @@ void test_mull(void)
   TEST_ASSERT_EQUAL(-25, calci(-5,5,2));
   TEST_ASSERT_EQUAL(0, calci(0,1,2));
 }
-
+#include "math.h"
 int main(void)
 {
 /* Initiate the Unity Test Framework */
