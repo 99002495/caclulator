@@ -1,6 +1,11 @@
 #include "calculator.h"
 #include "math.h"
+#include"stdio.h"
 
+
+#include "factorial.h"
+#include"math.h"
+#include "stdio.h"
 
 /* input 2 number with choice of opperator*/
 /*this programme uses function Pointer array */
@@ -99,7 +104,7 @@ float advance_calci(float num1,int choice)
     float cos_fun(float num1);
     float sec_fun(float num1);
     float cosec_fun(float num1);
-
+    float exponential(float num1);
     float factorial(float number);
     float one_by(float number);
     float modulous(float number);
@@ -115,7 +120,7 @@ float advance_calci(float num1,int choice)
   opa[7] = factorial;
   opa[8] = one_by;
   opa[9] = modulous;
-
+  opa[10]= exponential;
   opa[11]= cos_fun;
     result = opa[choice](num1);
     return result;
@@ -198,10 +203,17 @@ float one_by(float num1)
 
 }
 
+float exponential(float num1)
+{
+   float intermidiate;
+   intermidiate=exp(num1);
+   return(intermidiate);
+
+}
 float modulous(float num1)
 {
    float intermidiate;
-   intermidiate= abs(num1);
+   intermidiate=abs(num1);
    return(intermidiate);
 
 }
@@ -219,6 +231,149 @@ float factorial(float num1)
 
   return (num1 * factorial(num1-1));
 }
+int matrix(){
+    int matrixs_sum();
+    int matrix_sub();
+    int matrix_mul();
+    int (*opm[3]);
+    opm[0]=matrixs_sum;
+    opm[1]=matrix_sub;
+    opm[3]=matrix_mul;
+    return 0;
+}
+
+int matrixs_sum()
+{
+
+int row, coloum;
+scanf("%d %d",&row,&coloum);
+int index_r, index_c;
+int mat1[row][coloum], mat2[row][coloum], mat3[row][coloum];
+for(index_r = 0; index_r < row; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+scanf("%d",&mat1[index_r][index_c]);
+}
+for(index_r = 0; index_r < coloum; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+scanf("%d",&mat2[index_r][index_c]);
+}
+
+for(index_r = 0; index_r < row; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+{
+mat3[index_r][index_c] = mat1[index_r][index_c] + mat2[index_r][index_c];
+}
+}
+
+for(index_r = 0; index_r < row; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+printf("%d ", mat3[index_r][index_c]);
+printf("\n");
+}
+
+return 0;
+}
+
+int matrix_sub()
+{
+
+int row, coloum;
+scanf("%d %d",&row,&coloum);
+int index_r, index_c;
+int mat1[row][coloum], mat2[row][coloum], mat3[row][coloum];
+for(index_r = 0; index_r < row; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+scanf("%d",&mat1[index_r][index_c]);
+}
+for(index_r = 0; index_r < row; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+scanf("%d",&mat2[index_r][index_c]);
+}
+
+for(index_r = 0; index_r < row; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+{
+mat3[index_r][index_c] = mat1[index_r][index_c] - mat2[index_r][index_c];
+}
+}
+
+for(index_r = 0; index_r < row; index_r++)
+{
+for(index_c = 0; index_c < coloum; index_c++)
+printf("%d", mat3[index_r][index_c]);
+printf("\n");
+}
+
+return 0;
+}
+
+int matrix_mul()
+{
+int row, coloum, row1, column1, index_r, index_c, index, sum = 0;
+int mat1[10][10], mat2[10][10], mat3[10][10];
+
+printf("Enter number of rows and columns of mat1 matrix\n");
+scanf("%d%d", &row, &coloum);
+printf("Enter elements of matrix a\n");
+
+printf("\nEnter number of rows and columns of mat2 matrix\n");
+scanf("%d%d", &row1, &column1);
+
+if (coloum != row1)
+printf("\nThe matrices can’t be multiplied with each other.\n");
+else
+{
+printf("\nEnter elements of matrix2\n");
+
+for (index_r = 0; index_r < row1; index_r++)
+for (index_c = 0; index_c < column1; index_c++)
+scanf("%d", &mat2[index_r][index_c]);
+
+for (index_r = 0; index_r < row; index_r++) {
+for (index_c = 0; index_c < column1; index_c++) {
+for (index = 0; index < row1; index++) {
+sum = sum + mat1[index_r][index]*mat2[index][index_c];
+}
+
+mat3[index_r][index_c] = sum;
+sum = 0;
+}
+}
+
+printf("\nProduct of the matrices:\n");
+
+for (index_r = 0; index_r < row; index_r++) {
+for (index_c = 0; index_c < column1; index_c++)
+printf("%d\t", mat3[index_r][index_c]);
+
+printf("\n");
+}
+}
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
