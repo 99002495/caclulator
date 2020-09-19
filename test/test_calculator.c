@@ -36,7 +36,7 @@ void test_calci_basic1(void)
 
   
 }
-void test_calci_sub(void)
+void test_calci_advance(void)
 {
   TEST_ASSERT_EQUAL(-7, calci(2,9,1));
   TEST_ASSERT_EQUAL(7, calci(9,2,1));
@@ -55,7 +55,7 @@ int main(void)
 /* Run Test functions */
   RUN_TEST(test_calci_basic);
     RUN_TEST(test_calci_basic1);
-  RUN_TEST(test_calci_sub);
+  RUN_TEST(test_calci_advance);
   RUN_TEST(test_mull);
 
   /* Close the Unity Test Framework */
