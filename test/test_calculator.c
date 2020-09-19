@@ -10,10 +10,17 @@ void setUp(){}
 /* Required by the unity test framework */
 void tearDown(){}
 
-void test_calci_add(void)
+void test_calci_basic(void)
 {
-  TEST_ASSERT_EQUAL(20, calci(4,5,2));
+  TEST_ASSERT_EQUAL(9, calci(4,5,0));
   TEST_ASSERT_EQUAL(1, calci(6,-5,0));
+  TEST_ASSERT_EQUAL(9, calci(6,-5,1));
+  TEST_ASSERT_EQUAL(0, calci(6,6,1));
+  TEST_ASSERT_EQUAL(30, calci(6,5,2));
+  TEST_ASSERT_EQUAL(-30, calci(6,-5,2));
+  TEST_ASSERT_EQUAL(1, calci(6,6,3));
+  TEST_ASSERT_EQUAL(2, calci(12,6,3));
+  TEST_ASSERT_EQUAL(3, calci(6,2,3));
 }
 void test_calci_sub(void)
 {
@@ -32,7 +39,7 @@ int main(void)
   UNITY_BEGIN();
 
 /* Run Test functions */
-  RUN_TEST(test_calci_add);
+  RUN_TEST(test_calci_basic);
   RUN_TEST(test_calci_sub);
   RUN_TEST(test_mull);
 
