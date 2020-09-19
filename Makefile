@@ -48,7 +48,7 @@ doc:
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
+	gcc $(SRC) $(INC) -o -lm $(TEST_OUTPUT) -lcunit
 	./$(TEST_OUTPUT) -lm
 
 # Remove all the built files, invoke by `make clean`
