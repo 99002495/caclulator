@@ -44,7 +44,7 @@ int logarithm(int num1,int num);
 int add(int num1, int num2)
 {
   int intermidiate;
-   intermidiate=num1-num2;
+   intermidiate=num1+num2;
    return(intermidiate);
 }
 
