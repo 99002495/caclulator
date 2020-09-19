@@ -38,8 +38,12 @@ void test_calci_basic1(void)
 }
 void test_calci_advance(void)
 {
-  TEST_ASSERT_EQUAL(-7, calci(2,9,1));
-  TEST_ASSERT_EQUAL(7, calci(9,2,1));
+  TEST_ASSERT_EQUAL(3, advance_calci(9,0));
+  TEST_ASSERT_EQUAL(2, advance_calci(4,0));
+  TEST_ASSERT_EQUAL(1, advance_calci(10,1));
+  TEST_ASSERT_EQUAL(1, advance_calci(90,3));
+  TEST_ASSERT_EQUAL(0, advance_calci(0,3));
+  TEST_ASSERT_EQUAL(6, advance_calci(3,7));
 }
 void test_mull(void)
 {
