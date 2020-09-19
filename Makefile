@@ -19,12 +19,13 @@ BUILD = build
 
 
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+
 
 # All include folders with header files
 INC	= -Iinc
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
