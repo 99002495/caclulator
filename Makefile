@@ -24,7 +24,7 @@ run:$(PROJECT_NAME)
 	
 test:$(BUILD)
 	gcc $(SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
-	./$(TEST_OUTPUT)
+	./$(TEST_OUTPUT) -lm
 
 clean:
 	rm -rf $(PROJECT_NAME)
