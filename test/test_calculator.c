@@ -13,7 +13,7 @@ void tearDown(){}
 void test_calci_add(void)
 {
   TEST_ASSERT_EQUAL(20, calci(4,5,2));
-  TEST_ASSERT_EQUAL(11, calci(6,-5,0));
+  TEST_ASSERT_EQUAL(1, calci(6,-5,0));
 }
 void test_calci_sub(void)
 {
