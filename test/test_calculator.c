@@ -21,6 +21,20 @@ void test_calci_basic(void)
   TEST_ASSERT_EQUAL(1, calci(6,6,3));
   TEST_ASSERT_EQUAL(2, calci(12,6,3));
   TEST_ASSERT_EQUAL(3, calci(6,2,3));
+  
+}
+void test_calci_basic1(void)
+{
+  TEST_ASSERT_EQUAL(4, calci(2,2,4));
+  TEST_ASSERT_EQUAL(8, calci(2,3,4));
+  TEST_ASSERT_EQUAL(1, calci(6,6,5));
+  TEST_ASSERT_EQUAL(1, calci(1,1,4));
+  TEST_ASSERT_EQUAL(11, calci(6,5,0));
+
+  TEST_ASSERT_EQUAL(2, calci(4,2,6));
+  TEST_ASSERT_EQUAL(3, calci(9,2,6));
+
+  
 }
 void test_calci_sub(void)
 {
@@ -40,6 +54,7 @@ int main(void)
 
 /* Run Test functions */
   RUN_TEST(test_calci_basic);
+    RUN_TEST(test_calci_basic1);
   RUN_TEST(test_calci_sub);
   RUN_TEST(test_mull);
 
