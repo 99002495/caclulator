@@ -14,7 +14,7 @@ void test_calci_basic(void)
 {
   TEST_ASSERT_EQUAL(9, calci(4,5,0));
   TEST_ASSERT_EQUAL(1, calci(6,-5,0));
-  TEST_ASSERT_EQUAL(9, calci(6,-5,1));
+  TEST_ASSERT_EQUAL(11, calci(6,-5,1));
   TEST_ASSERT_EQUAL(0, calci(6,6,1));
   TEST_ASSERT_EQUAL(30, calci(6,5,2));
   TEST_ASSERT_EQUAL(-30, calci(6,-5,2));
