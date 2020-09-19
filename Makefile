@@ -9,8 +9,11 @@ INC = -Iunity\
 PROJECT_NAME = calculator.out
 
 
+
 # Output directory
 BUILD = build
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 
 $(PROJECT_NAME): $(SRC)
@@ -21,6 +24,10 @@ all: $(SRC) $(BUILD)
 
 run:$(PROJECT_NAME)
 	./${PROJECT_NAME}
+
+test:$(BUILD)
+	gcc $(TEST_SRC) $(INC) -o -lm $(TEST_OUTPUT) -lcunit
+	./$(TEST_OUTPUT)
 	
 
 
