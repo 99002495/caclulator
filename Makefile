@@ -36,11 +36,11 @@ $(PROJECT_NAME):all
 .PHONY: run clean test  doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out 
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out -lm
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out -lm
+	./$(PROJECT_OUTPUT).out
 
 # Document the code using Doxygen
 doc:
@@ -48,8 +48,8 @@ doc:
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(SRC) $(INC) -o -lm $(TEST_OUTPUT) -lcunit
-	./$(TEST_OUTPUT) -lm
+ 	gcc $(SRC) $(INC) -o  $(TEST_OUTPUT) -lm -lcunit 
+	./$(TEST_OUTPUT) 
 
 # Remove all the built files, invoke by `make clean`
 clean:
