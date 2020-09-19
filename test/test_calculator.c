@@ -23,7 +23,7 @@ void test_calci_sub(void)
 void test_mull(void)
 {
   TEST_ASSERT_EQUAL(-25, calci(-5,5,2));
-  TEST_ASSERT_EQUAL(0, matrix(0));
+  TEST_ASSERT_EQUAL(0, calci(0,0,0));
 }
 
 int main(void)
