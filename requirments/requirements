@@ -1,1 +1,36 @@
- 
+ ***********************************************
+Activity 3- CI/Unit test Project
+Calculator application using Function Pointers
+Problem statement
+To develop an application that performs all the functions of a calculator using C program. 
+ GIT repository link:- link 
+System Requirements
+High level requires 
+
+Table 8 high level requirements
+ID	Name/Tag	Description
+H_01	Operational Requirements	•	GNU gcc compiler
+•	Unity test framework
+•	Github
+H_02	Basic Function	To perform all basic calculator functions
+H_03	Advance Functions	Trigonometry, log, modulus functions
+H_04	Matrix Function	Matrix add, subtract, multiply 
+
+
+Low level Requirements
+Table 9 low level requirements
+ID	Description 
+H_01_L_01	Workflow Ci
+H_01_L_02	Unity test frame work
+H_01_L_03	Make file in git
+H_01_L_01	Unity test main file
+H_02_L_01	Function for add and subtract 
+H_02_L_02	Function for multiply and divide
+H_02_L_03	Function for power and root
+H_02_L_04	Main basic function with function pointers 
+H_03_L_01	Factorial 
+H_03_L_02	Main advance function with function pointers
+H_04_L_01	Matrix add and subtract
+H_04_L_02	Matrix multiplication 
+
+*****************************************
